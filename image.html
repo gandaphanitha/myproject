@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Slider</title>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  <link rel="stylesheet" href="image.css" />
+</head>
+
+<body>
+  <div class="slider-container">
+    <div class="image-container">
+      <img src="https://images.meesho.com/images/products/345185576/4irmj_512.webp" alt="image" />
+      <img src="https://images.meesho.com/images/products/345185576/evwvt_512.webp" alt="image" />
+      <img src="https://images.meesho.com/images/products/345185576/a7vzn_512.webp" alt="image" />
+      <img src="https://images.meesho.com/images/products/345185576/iykea_512.webp" alt="image" />
+    </div>
+    <i class="fas fa-angle-double-left btn prev"></i>
+    <i class="fas fa-angle-double-right btn next"></i>
+  </div>
+  <script>
+    const nextEl = document.querySelector(".next");
+
+    const prevEl = document.querySelector(".prev");
+
+    const imgsEl = document.querySelectorAll("img");
+
+    const imageContainerEl = document.querySelector(".image-container");
+
+    let currentImg = 1;
+
+    let timeout;
+
+    nextEl.addEventListener("click", () => {
+      currentImg++;
+      clearTimeout(timeout);
+      updateImg();
+    });
+
+    prevEl.addEventListener("click", () => {
+      currentImg--;
+      clearTimeout(timeout);
+      updateImg();
+    });
+
+    updateImg();
+
+    function updateImg() {
+      if (currentImg > imgsEl.length) {
+        currentImg = 1;
+      } else if (currentImg < 1) {
+        currentImg = imgsEl.length;
+      }
+      imageContainerEl.style.transform = `translateX(-${(currentImg - 1) * 500}px)`;
+      timeout = setTimeout(() => {
+        currentImg++;
+        updateImg();
+      }, 3000);
+    } A
+  </script>
+  <!-- <script src="slide.js"></script> -->
+</body>
+
+</html>

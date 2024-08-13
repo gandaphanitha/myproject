@@ -1,0 +1,86 @@
+*{
+    font-family: 'Nunito',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    /* transition:all 2s linear; */
+}
+html{
+    /* background-color: #27ae60;
+    color: white; */
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+}
+.header-1{
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    font-size: 20px;
+}
+.logo{
+    color: #282525;
+    font-weight: bolder;
+    font-family: 3rem;
+}
+.fa-search{
+    margin-right: 50px;
+}
+.logo i{
+    padding-right: .5rem;
+    color: #27ae60;
+}
+.header-1 .search-box-conatiner{
+    display: flex;
+    height: 5rem;
+}
+.header-1 .search-box-conatiner #search-box{
+     height: 100%;
+     width: 100%;
+     padding: 1rem;
+     font-size: 2rem;
+     color: #333;
+     border:1rem solid rgba(0,0,0,.3);
+     text-transform: none;
+}
+.header-2{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+.header-1 .search-box-conatiner #search-box label{
+     height: 100%;
+     width: 8rem;
+     font-size: 2.5rem;
+     line-height: 5rem;
+     background: #27ae60;
+     color: #eee;
+     text-align: center;
+     cursor: pointer;
+
+
+}
+.header-1 .search-box-conatiner #search-box label:hover{
+    background: #333;
+}
+.header-2{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    position: relative;
+
+}
